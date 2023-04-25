@@ -39,17 +39,7 @@ export class ShopComponent implements OnInit {
     return true; // If all fields are valid, return true
   }
 
-  validateForm(): void {
-    const isValid = this.product.id && this.product.quantity && this.product.title &&
-      this.product.id >= 1 && this.product.id <= 9 &&
-      this.product.quantity.toString().length === 3 &&
-      this.product.title.length >= 3 && this.product.title === this.product.title.toUpperCase();
-
-    if (isValid) {
-      // Redirect to home page with query parameters
-      this.router.navigate(['/home'], { queryParams: { id: this.product.id, title: this.product.title, quantity: this.product.quantity } });
-    }
-  }
+  
   redirectToHome() {
     // Redirect to home page with query parameters
     this.router.navigate(['/home'], { queryParams: { id: this.product.id, title: this.product.title, quantity: this.product.quantity } });
