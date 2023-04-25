@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AnnonceModule } from './annonce/annonce.module';
 import { AnnonceRoutingModule } from './annonce/annonce-routing.module';
+import { FormsModule } from '@angular/forms';
+import { ShopComponent } from './shop/shop.component';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,14 @@ import { AnnonceRoutingModule } from './annonce/annonce-routing.module';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ShopComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AnnonceModule,
-    AnnonceRoutingModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

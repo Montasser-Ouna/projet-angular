@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
 import { AnnonceComponent } from './annonce/annonce.component';
+import { AnnonceRoutingModule } from './annonce/annonce-routing.module';
+import { ShopComponent } from './shop/shop.component';
 
 
 
@@ -15,14 +17,17 @@ const routes: Routes = [
   {path:"home", component: HomeComponent}, 
   {path:"Product", component: ProductComponent},
   {path :" ", redirectTo:'home', pathMatch:"full"},
+  {path: "annonce",component: AnnonceComponent},
+  {path:"shop",component: ShopComponent},
   {path:"**",component:NotfoundComponent},
-  {path: "annonce",component: AnnonceComponent}
+  
+  
   
   
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule,AnnonceRoutingModule]
 })
 export class AppRoutingModule { }
